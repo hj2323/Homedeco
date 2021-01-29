@@ -17,7 +17,7 @@ import lombok.extern.log4j.Log4j2;
 @ContextConfiguration({
 	"file:src/main/webapp/WEB-INF/spring/root-context.xml",
 	"file:src/main/webapp/WEB-INF/spring/security-context.xml"
-})
+})//4454
 @Log4j2
 public class MemberMapperTest {
 	@Autowired
