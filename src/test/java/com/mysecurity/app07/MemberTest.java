@@ -26,7 +26,7 @@ public class MemberTest {
 	private PasswordEncoder pwencoder;
 	@Autowired
 	private DataSource ds;
-	
+	//ì™€ ì‹ ë‚œë‹¤ - ë°•ê²½ìš©
 	@Test
 	public void testinsertMember() {
 		String sql = "insert into tbl_member2(userid, userpw, username) values(?,?,?)";
@@ -41,13 +41,13 @@ public class MemberTest {
 				ps.setString(2, pwencoder.encode("pw"+i));
 				if(i<80) {
 					ps.setString(1, "user"+i);
-					ps.setString(3, "ÀÏ¹Ý»ç¿ëÀÚ"+i);
+					ps.setString(3, "ï¿½Ï¹Ý»ï¿½ï¿½ï¿½ï¿½"+i);
 				} else if(i<90) {
 					ps.setString(1, "manager"+i);
-					ps.setString(3, "¿î¿µÀÚ"+i);
+					ps.setString(3, "ï¿½î¿µï¿½ï¿½"+i);
 				}else {
 					ps.setString(1, "admin"+i);
-					ps.setString(3, "°ü¸®ÀÚ"+i);
+					ps.setString(3, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+i);
 				}
 				ps.executeUpdate();
 			}catch(SQLException e) {
